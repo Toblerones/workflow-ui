@@ -1,0 +1,30 @@
+<div class="page-signin ng-scope">
+    <div class="signin-body">
+        <div class="container">
+            <div class="form-container">
+                <form class="form-horizontal ng-pristine ng-valid" autocomplete="off">
+                    <div class="form-group">
+                    	<label>Windows Logon</label>
+                        {{input class="form-control" placeholder="Windows Logon" type="email" value=model.userId enter="logon" autocomplete="off"}}
+                        {{input-error errors=model.validationErrors.userId.messages}}
+                    </div>
+                    <div class="form-group">
+                    	<label>Password</label>
+                        {{input class="form-control logon-password" placeholder="Password" type="password" value=model.password enter="logon"}}
+                    	{{input-error errors=model.validationErrors.userId.password}}
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <a href="#/" class="btn btn-primary btn-lg btn-block" {{action "logon"}}>Log in</a>
+                    </div>
+                </form>
+				   
+                <section>
+                    <p class="text-center  text text-danger"><strong>{{err}}</strong></p>
+                </section>    
+   
+            </div>
+        </div>
+    </div>
+</div>
